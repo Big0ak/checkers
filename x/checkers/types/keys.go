@@ -24,3 +24,27 @@ const (
 func KeyPrefix(p string) []byte {
 	return []byte(p)
 }
+
+const (
+	NextGameKey = "NextGame-value-"
+)
+
+// события созданые игой
+const (
+	StoredGameKey          = "StoredGame-value-"
+	StoredGameEventKey     = "NewGameCreated" // указывает, на какой ключ обращать внимание
+	StoredGameEventCreator = "Creator"
+	StoredGameEventIndex   = "Index" // какая игра актуальна
+	StoredGameEventRed     = "Red"   // актуально ли для этого игрока
+	StoredGameEventBlack   = "Black" // актуально ли для этого игрока
+)
+
+//события созданные игроком
+const (
+	PlayMoveEventKey       = "MovePlayed"
+	PlayMoveEventCreator   = "Creator"
+	PlayMoveEventIdValue   = "IdValue"
+	PlayMoveEventCapturedX = "CapturedX"
+	PlayMoveEventCapturedY = "CapturedY"
+	PlayMoveEventWinner    = "Winner"
+)
